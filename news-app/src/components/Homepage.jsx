@@ -4,7 +4,7 @@ import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 import ArticleCard from './ArticleCard'
 
 // News API key and base URL for fetching news data
-const API_KEY = 'a05728f258de4685836a14a693952eed';
+const API_KEY = import.meta.env.VITE_API_KEY;
 const BASE_URL = 'https://newsapi.org/v2'
 
 
@@ -53,7 +53,7 @@ function Homepage() {
                     apiKey: API_KEY
                 }
             })
-
+            console.log('API RESPONSE:', response.data)
             setArticles(response.data.articles) // Storing fetched articles in the state
         } catch (error) {
             console.log('ERROR FETCHING NEWS ARTICLES:', error)
