@@ -1,0 +1,53 @@
+/* src/index.css */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Ensure the card image has a fixed height */
+.article-img {
+    height: 150px;
+    object-fit: cover;
+    /* Preserve the aspect ratio */
+}
+
+/* Bootstrap class to ensure all cards are the same height */
+.card {
+    min-height: 100%;
+    /* Set the minimum height to 100% */
+}
+
+/* Add a custom gradient to buttons */
+.btn-custom {
+    border: none;
+    color: rgb(0, 0, 0);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-custom:hover {
+    background: rgb(54, 53, 53);
+    transform: translateY(-2px);
+    /* Lift effect on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Add shadow, rounded corners, and custom hover animation to cards */
+#card-custom {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+card-custom:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
